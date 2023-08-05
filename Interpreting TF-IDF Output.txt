@@ -1,0 +1,25 @@
+TF-IDF (Term Frequency-Inverse Document Frequency) is a numerical representation of the importance of each word (term) in a collection of documents. It is commonly used in natural language processing and information retrieval to quantify the relevance of a word in a specific document relative to a collection of documents.
+
+The TF-IDF score of a word in a document is calculated based on two main components:
+
+Term Frequency (TF): This measures the frequency of a word in a specific document. It is calculated as the number of times a word appears in the document divided by the total number of words in that document. A higher TF value indicates that the word is more important or relevant to the document.
+
+Inverse Document Frequency (IDF): This measures the rarity of a word across the entire collection of documents. It is calculated as the logarithm of the total number of documents divided by the number of documents containing the word. The IDF value is higher for words that appear in fewer documents and is lower for words that appear in many documents. Words with a high IDF score are considered to be more unique and, therefore, more significant.
+
+The TF-IDF score is the product of the TF and IDF scores. It combines local term relevance (TF) with global term importance (IDF) to provide a measure of the word's significance in the context of a specific document and the entire collection.
+
+Interpreting TF-IDF scores:
+
+High TF-IDF score: A high TF-IDF score indicates that the word is both frequent in the document and rare across the entire collection. This suggests that the word is a distinguishing feature of the document and is highly relevant to it.
+
+Low TF-IDF score: A low TF-IDF score indicates that the word is either not frequent in the document or appears in many other documents. Such words are considered less informative or less important for characterizing the content of the document.
+
+In the context of information retrieval or text analysis, you can use TF-IDF scores to:
+
+Identify important words: Words with high TF-IDF scores are potential keywords or important terms that represent the main themes or topics of a document.
+
+Remove common words: Words with low TF-IDF scores are likely to be common stop words or noise words that do not contribute much to the meaning of the document and can be removed to reduce noise in the analysis.
+
+Measure document similarity: TF-IDF scores can be used to calculate the similarity between documents. Documents with similar content will have similar TF-IDF scores for their shared keywords.
+
+Overall, TF-IDF is a valuable tool for extracting meaningful information from a collection of documents and understanding the relative importance of words within the context of each document and the entire corpus.
