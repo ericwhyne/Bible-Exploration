@@ -11,7 +11,7 @@ file_paths = [
     "documents/John-raw.txt"
 ]
 # How many of the top results for each file to output
-num_significant_words = 15
+num_significant_words = 5
 # After we look at output, there will be custom words we don't care about.
 custom_words_file = "words_we_dont_care_about.txt"
 with open(custom_words_file, "r") as file:
