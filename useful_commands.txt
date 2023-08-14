@@ -1,0 +1,2 @@
+Grab a section of the mapped bible:
+cat John-mapped.txt | sed -e '/John 1:19/,/John 12:50/!d'
