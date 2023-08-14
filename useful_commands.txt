@@ -1,2 +1,22 @@
 Grab a section of the mapped bible:
 cat John-mapped.txt | sed -e '/John 1:19/,/John 12:50/!d'
+
+
+Convert an SQLite3 Bible into the text format we use here:
+-- Open the SQLite database
+sqlite3 your_database.db
+
+-- Set the output to a text file
+.output output.txt
+
+-- Run the SQL query to format the verses and output to the text file
+SELECT b.long_name || ' ' || v.chapter || ':' || v.verse || ' ' || v.text AS formatted_verse
+FROM verses v
+JOIN books b ON v.book_number = b.book_number;
+
+Alternatively use the sqlitebible2text tool in the tools directy of this repo.
+Lots of bible versions available here: https://www.ph4.org/b4_index.php
+
+
+Remove bracketed numbers and html tags from text:
+sed -E 's/<[^>]*>//g; s/\[[^]]*\]//g' input.txt > output.txt
